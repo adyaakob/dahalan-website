@@ -1,0 +1,18 @@
+{
+  "name": "project-template",
+  "version": "0.1.0",
+  "description": "Project template with comprehensive blueprint",
+  "main": "src/backend/index.js",
+  "scripts": {
+    "start": "node src/backend/index.js",
+    "dev": "nodemon src/backend/index.js",
+    "test": "jest",
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint ."
+  },
+  "keywords": ["project-template", "blueprint"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

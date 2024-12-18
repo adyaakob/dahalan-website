@@ -1,0 +1,37 @@
+name: Deploy to Dokploy VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup SSH
+      uses: webfactory/ssh-agent@v0.5.0
+      with:
+        ssh-private-key: ${{ secrets.VPS_SSH_PRIVATE_KEY }}
+    
+    - name: Deploy to VPS
+      run: |
+        ssh-keyscan -H 167.235.75.153 >> ~/.ssh/known_hosts
+        scp -r src/* root@167.235.75.153:/var/www/html/dahalan.org/testworkflow/
+      
+    - name: Verify Deployment
+      run: |
+        curl -f https://dahalan.org/testworkflow/index.html || exit 1
+
+    - name: Slack Notification
+      if: success()
+      uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        text: Deployment to VPS successful!
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}

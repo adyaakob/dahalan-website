@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dahalan.org - Deployment Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Deployment Test Page</h1>
+            <p>Testing GitHub to VPS Deployment</p>
+        </header>
+        
+        <main>
+            <section class="info-panel">
+                <h2>Server Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Current Time</h3>
+                        <p id="currentTime">Loading...</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Deployment Time</h3>
+                        <p id="deploymentTime">Loading...</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Host Info</h3>
+                        <p id="hostInfo">Loading...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="deployment-status">
+                <h2>Deployment Status</h2>
+                <div class="status-indicators">
+                    <div class="status-item">
+                        <span class="status-dot"></span>
+                        <p>GitHub Repository</p>
+                    </div>
+                    <div class="status-arrow">→</div>
+                    <div class="status-item">
+                        <span class="status-dot"></span>
+                        <p>Dokploy VPS</p>
+                    </div>
+                    <div class="status-arrow">→</div>
+                    <div class="status-item">
+                        <span class="status-dot"></span>
+                        <p>Live Website</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Dahalan.org - Deployment Test</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
