@@ -10,5 +10,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN chown -R nginx:nginx /usr/share/nginx/html && \
     chmod -R 755 /usr/share/nginx/html
 
-EXPOSE 3000
+# Expose both HTTP and HTTPS ports
+EXPOSE 3000 443
+
 CMD ["nginx", "-g", "daemon off;"]
