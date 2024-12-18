@@ -2,14 +2,8 @@
   "name": "dahalan-website",
   "version": "1.0.0",
   "description": "Static website for dahalan.org",
-  "main": "index.html",
   "scripts": {
-    "start": "echo 'Static website'",
-    "build": "echo 'No build step needed'"
-  },
-  "keywords": ["static-website", "dahalan"],
-  "author": "Adya Akob",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+    "start": "echo 'Starting nginx...'",
+    "build": "echo 'Build complete'"
+  }
 }
