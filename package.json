@@ -1,17 +1,14 @@
 {
-  "name": "project-template",
-  "version": "0.1.0",
-  "description": "Project template with comprehensive blueprint",
-  "main": "src/backend/index.js",
+  "name": "dahalan-website",
+  "version": "1.0.0",
+  "description": "Static website for dahalan.org",
+  "main": "index.html",
   "scripts": {
-    "start": "node src/backend/index.js",
-    "dev": "nodemon src/backend/index.js",
-    "test": "jest",
-    "build": "webpack --config webpack.config.js",
-    "lint": "eslint ."
+    "start": "echo 'Static website'",
+    "build": "echo 'No build step needed'"
   },
-  "keywords": ["project-template", "blueprint"],
-  "author": "Your Name",
+  "keywords": ["static-website", "dahalan"],
+  "author": "Adya Akob",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {}
